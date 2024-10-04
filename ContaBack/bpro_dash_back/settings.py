@@ -94,14 +94,6 @@ DATABASES = {
         'HOST': env.str('DB_HOST'),           
         'PORT': env.int('DB_PORT'), 
     },
-    'postgressconn': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bprodb',
-        'USER': 'doadmin',
-        'PASSWORD': 'AVNS_mNtZOEIAcNTWhQlrPpW',
-        'HOST': 'db-postgresql-nyc3-43542-do-user-17763031-0.j.db.ondigitalocean.com',
-        'PORT': '25060',
-    }
 }
 
 
