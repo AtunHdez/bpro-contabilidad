@@ -1,0 +1,48 @@
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
+type Categoria {
+  categoria: Int!
+  nombre: String!
+  orden: Int!
+}
+
+type DatosIndicadorType {
+  total: String!
+  nombre: String!
+  encTabla: String!
+  alineacion: String!
+  idIndicador: Int!
+  idDetContenido: Int!
+}
+
+type IndicadorType {
+  display: Boolean!
+  favorito: Boolean!
+  indicador: String!
+  idCategoria: Int!
+  idIndicador: Int!
+  anioAnterior: DatosIndicadorType
+  mesAnterior: DatosIndicadorType
+  mesActual: DatosIndicadorType
+  idIndicadorUsuario: Int!
+}
+
+type ModificaIndicadorResponse {
+  success: Boolean!
+  message: String!
+}
+
+type Mutation {
+  modificaFavoritos(idUsuario: Int!, favorito: Boolean!, idIndicadorUsuario: Int!): ModificaIndicadorResponse!
+  modificaVisibles(idUsuario: Int!, visible: Boolean!, idIndicadorUsuario: Int!): ModificaIndicadorResponse!
+}
+
+type Query {
+  categoriasPorUsuario(idUsuario: Int!): [Categoria!]!
+  getIndicadores(usuarioId: Int!): [IndicadorType!]!
+}
+

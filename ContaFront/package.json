@@ -1,0 +1,44 @@
+{
+  "name": "bpro-dash-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run relay && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "relay": "relay-compiler"
+  },
+  "dependencies": {
+    "@actualizaciontecnologica/at-itg": "^1.1.27",
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.0",
+    "@mui/material": "^6.0.2",
+    "@mui/material-nextjs": "^6.1.0",
+    "@mui/styled-engine-sc": "^6.1.0",
+    "@mui/x-charts": "^7.16.0",
+    "chart.js": "^4.4.4",
+    "graphql": "^16.9.0",
+    "gridstack": "^10.3.1",
+    "next": "14.2.9",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-relay": "^18.0.0",
+    "relay-runtime": "^18.0.0",
+    "styled-components": "^6.1.13",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-relay": "^16.0.6",
+    "@types/relay-runtime": "^17.0.4",
+    "postcss": "^8",
+    "relay-compiler": "^18.0.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
